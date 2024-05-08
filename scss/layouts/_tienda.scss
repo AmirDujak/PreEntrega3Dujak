@@ -1,0 +1,28 @@
+.tienda-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+    padding: 20px;
+    gap: 20px;
+    background-color: black;
+    width: 75%;
+
+    .tienda {
+        @include flex(flex, column, center, center, 0px, 100%);
+        border: 1px solid black;
+        box-shadow: 9px 9px 9px rgb(55, 55, 55);
+
+        img {
+            @include img(100%, 300px, cover);
+        }
+
+        div {
+            padding: 20px;
+            background-color: white;
+            width: 100%;
+
+            h2 {
+                color: black;
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.img {
+    @include img(50%, 600px, cover);
+}
+
+.article-content {
+    @include flex(flex, column, center, center, 15px, 50%);
+
+    p {
+        @include texto(30px, 'Roboto', center, lighter, white, 80%);
+    }
+
+    h2 {
+        font-size: 40px;
+        color: white;
+    }
+}

@@ -1,0 +1,23 @@
+@mixin img($width, $height, $fit) {
+    width: $width;
+    height: $height;
+    object-fit: $fit;
+}
+
+@mixin texto($size, $family, $align, $grosor, $color, $width) {
+    font-size: $size;
+    font-family: $family;
+    text-align: $align;
+    font-weight: $grosor;
+    color: $color;
+    width: $width;
+}
+
+@mixin flex($display, $direction, $justify, $align, $gap, $width) {
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+    width: $width;
+}

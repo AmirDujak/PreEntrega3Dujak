@@ -1,0 +1,347 @@
+@charset "UTF-8";
+/* Importar base */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(Roboto_Slab/Roboto_Slab-VariableFont_wght.ttf);
+}
+body {
+  background-color: black;
+}
+
+/* Importar components*/
+/* Mover luego lo de abajo a los archivos donde corresponden */
+h1 {
+  font-size: 40px;
+  font-family: "Roboto";
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+}
+footer .map {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  gap: 0;
+  width: 100%;
+  padding: 10px;
+}
+footer .map .map-text {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  width: 600px;
+  color: black;
+}
+footer .socials {
+  height: 100%;
+  width: 100%;
+}
+footer .socials .instagram a, footer .socials .whatsapp a {
+  text-decoration: none;
+  color: black;
+  font-size: 40px;
+}
+footer .socials .instagram .logo, footer .socials .whatsapp .logo {
+  width: 40px;
+  height: 40px;
+}
+
+/* Importar layouts */
+.img {
+  width: 50%;
+  height: 600px;
+  object-fit: cover;
+}
+
+.article-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 50%;
+}
+.article-content p {
+  font-size: 30px;
+  font-family: "Roboto";
+  text-align: center;
+  font-weight: lighter;
+  color: white;
+  width: 80%;
+}
+.article-content h2 {
+  font-size: 40px;
+  color: white;
+}
+
+.product-div {
+  background-color: gray;
+}
+.product-div .products { /* Caja global */
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: gray;
+  gap: 20px;
+  width: 60%;
+  padding: 20px;
+  flex-direction: column;
+}
+.product-div .products .product-opcion { /* Secciones de productos de dos en dos */
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
+}
+.product-div .products .product-opcion h2 {
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+}
+.product-div .products .product-opcion .product { /* Productos individuales dentro de cada sección de productos */
+  flex-direction: column;
+  width: 50%;
+  background-color: black;
+  border-radius: 20px;
+}
+.product-div .products .product-opcion .product img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.product-div .products .product-opcion .product h2 {
+  padding: 15px;
+}
+.product-div .products .product-opcion .product-content { /* Caja de texto de los productos */
+  font-size: 20px;
+  text-align: center;
+  padding: 30px;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  color: white;
+}
+.product-div .products .product-opcion .product-content a {
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.tienda-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+  padding: 20px;
+  gap: 20px;
+  background-color: black;
+  width: 75%;
+}
+.tienda-container .tienda {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  width: 100%;
+  border: 1px solid black;
+  box-shadow: 9px 9px 9px rgb(55, 55, 55);
+}
+.tienda-container .tienda img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.tienda-container .tienda div {
+  padding: 20px;
+  background-color: white;
+  width: 100%;
+}
+.tienda-container .tienda div h2 {
+  color: black;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  padding: 20px;
+  gap: 20px;
+}
+.gallery .image {
+  width: 100%;
+  height: 400px;
+  border: 2px solid black;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.gallery .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+label {
+  color: white;
+}
+
+@media (max-width: 1146px) {
+  .tienda-container {
+    width: 60%;
+  }
+}
+@media (max-width: 991px) {
+  .article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+    padding: 10px;
+  }
+  .article .article-content {
+    position: absolute;
+    justify-content: end;
+    height: 500px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.361);
+  }
+  .article .article-content h2 {
+    font-size: 2rem;
+    font-family: "Roboto";
+    text-align: center;
+    font-weight: lighter;
+    color: white;
+    width: 100%;
+  }
+  .article .article-content p {
+    font-size: 1rem;
+    font-family: "Roboto";
+    text-align: center;
+    font-weight: lighter;
+    color: white;
+    width: 90%;
+  }
+  .article img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+  .product-div .products {
+    width: 75%;
+  }
+  .product-div .products .product-opcion {
+    flex-direction: column;
+    align-items: center;
+  }
+  .product-div .products .product-opcion .product {
+    width: 100%;
+  }
+  footer {
+    flex-direction: column;
+  }
+  footer .socials .instagram, footer .socials .whatsapp {
+    font-size: 25px;
+    font-family: "Roboto";
+    text-align: center;
+    font-weight: lighter;
+    color: black;
+    width: 100%;
+  }
+  footer .socials .instagram img, footer .socials .whatsapp img {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+  }
+  footer .map {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+  }
+}
+@media (max-width: 660px) {
+  .article img {
+    height: 400px;
+  }
+  .article img .article-content {
+    height: 400px;
+  }
+  .article img .article-content h2 {
+    font-size: 1.5rem;
+    font-family: "Roboto";
+    text-align: center;
+    font-weight: lighter;
+    color: white;
+    width: 100%;
+  }
+  .article img .article-content p {
+    font-size: 0.8rem;
+    font-size: 0.8rem;
+    font-family: "Roboto";
+    text-align: center;
+    font-weight: lighter;
+    color: white;
+    width: 100%;
+  }
+  .product-div .products {
+    width: 100%;
+  }
+  .product-div .products .product-opcion .product {
+    width: 100%;
+  }
+  .tienda-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .tienda-container .tienda img {
+    width: 50%;
+    height: 300px;
+    object-fit: cover;
+  }
+  footer .map iframe {
+    width: 80%;
+  }
+  footer .map .map-text {
+    width: 80%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

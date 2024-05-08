@@ -1,0 +1,108 @@
+@media (max-width: 1146px) {
+    .tienda-container {
+        width: 60%;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .article {
+        @include flex(flex, column, center, center, 0, 100%);
+        padding: 10px;
+
+        .article-content {
+            position: absolute;
+            justify-content: end;
+            height: 500px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.361);
+
+            h2 {
+                @include texto(2rem, 'Roboto', center, lighter, white, 100%)
+            }
+
+            p {
+                @include texto(1rem, 'Roboto', center, lighter, white, 90%);
+            }
+        }
+
+        img {
+            @include img(100%, 500px, cover);
+        }
+    }
+
+    .product-div .products {
+        width: 75%;
+
+        .product-opcion {
+            flex-direction: column;
+            align-items: center;
+
+            .product {
+                width: 100%;
+            }
+        }
+    }
+
+    footer {
+        flex-direction: column;
+
+        .socials .instagram, .socials .whatsapp {
+            @include texto(25px, 'Roboto', center, lighter, black, 100%);
+
+            img {
+                @include img(25px, 25px, cover);
+            }
+        }
+
+        .map {
+            @include flex(flex, column, center, center, 0, 100%);
+        }
+    }
+}
+
+@media (max-width: 660px) {
+    .article img {
+        height: 400px;
+
+        .article-content {
+            height: 400px;
+
+            h2 {
+                @include texto(1.5rem, 'Roboto', center, lighter, white, 100%);
+            }
+
+            p {
+                font-size: 0.8rem;
+                @include texto(0.8rem, 'Roboto', center, lighter, white, 100%);
+            }
+        }
+    }
+
+    .product-div .products {
+        width: 100%;
+
+        .product-opcion .product {
+            width: 100%;
+        }
+    }
+
+    .tienda-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+        .tienda img {
+            @include img(50%, 300px, cover);
+        }
+    }
+
+    footer .map {
+        
+        iframe {
+            width: 80%;
+        }
+
+        .map-text {
+            width: 80%;
+        }
+    }
+}

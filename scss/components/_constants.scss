@@ -1,0 +1,12 @@
+/* Mover luego lo de abajo a los archivos donde corresponden */
+h1 {
+    @include texto(40px, 'Roboto', center, bold, white, 100%);
+}
+
+.flex {
+    display: flex;
+}
+
+.center {
+    @include flex(flex, column, center, center, 0, 100%);
+}

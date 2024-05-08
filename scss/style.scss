@@ -1,0 +1,15 @@
+/* Importar base */
+@import 'base/reset';
+@import 'base/vars';
+@import 'base/utilities';
+/* Importar components*/
+@import 'components/constants';
+@import 'components/navbar';
+@import 'components/footer';
+/* Importar layouts */
+@import 'layouts/index';
+@import 'layouts/alquiler';
+@import 'layouts/tienda';
+@import 'layouts/galeria';
+@import 'layouts/contacto';
+@import 'layouts/mediaqueries.scss';
